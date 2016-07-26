@@ -10,6 +10,13 @@
     <div class="contenedor">
     	<form name="form1" method="post" action="validar.php">  
              <table class="formulario">
+             
+             		<tr>
+                      <td class="etiqueta">Documento:</td>
+                      <td><input type="text" name="documento" id="textfield" /></td>
+                    </tr>
+             
+             
                     <tr>
                       <td class="etiqueta">Contraseña:</td>
                       <td><input type="text" name="clave" id="textfield" /></td>

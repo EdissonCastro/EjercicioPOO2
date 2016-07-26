@@ -8,16 +8,19 @@
 <body>
 <?php
 	session_start();
+	include("conexion.php");
 	
-	$clave = $_POST['clave'];
+	$documento = $_POST['documento'];
+	$clave 	   = $_POST['clave'];
 	$respuesta = $_POST['respuesta'];
 	
-		if( $clave == "1234" && $respuesta == "16" )
+		if( $clave == "1234" && $respuesta == 16" )
 		{
 			$_SESSION['principal'] = true;
 			header("Location:operaciones.php");
-		}				
-		else
+		}
+						
+		if( $clave != "1234" || $respuesta != "16" )
 		{
 			$_SESSION['principal'] = false;
 			echo "Error: Contraseña o respuesta no válidos";
