@@ -1,9 +1,10 @@
 @charset "utf-8";
 body{
-	background-color:#A5FFF2;
+	background-image:url("weather.png");
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:18px;
 }
+
 header, footer{	
 	border: 1px solid black;
 	border-radius:10px;
@@ -43,6 +44,8 @@ button:hover{
 	padding: 45px;
 	border-radius:10px;
 	background-color:#2C7F73;
+	margin:auto;
+	width:53%;
 }
 
 .formulario{
@@ -50,6 +53,7 @@ button:hover{
 	margin-top:20px;
 	padding: 15px;
 	margin:auto;
+	margin-bottom:10px;
 	border-radius:10px;
 	background-color:#84CCC1;
 	text-align:center;
@@ -58,3 +62,56 @@ button:hover{
 .etiqueta{
 	text-align:right;
 }
+
+.titulo{
+	width:60%;
+	border-radius: 10px;
+	font-size:26px;
+	margin-top:20px;
+	padding: 15px;
+	margin:auto;
+	margin-bottom:10px;
+	border-radius:10px;
+	background-color:#84CCC1;
+	text-align:center;
+}
+
+#navegador ul{
+	list-style-type: none;
+	text-align:center;
+}
+
+#navegador li{
+	display:inline;
+	text-align:center;}
+
+#navegador li a{
+	
+	color:black;
+	background-color:#84CCC1;
+	padding:2%;	
+	text-decoration:none;
+}
+
+#navegador li a:hover{
+	background-color:#0CF;
+	color:#ffffff;
+}
+
+nav{
+	width:58%;
+	border:none;	
+	margin:auto;	
+	border-radius:10px;
+	background-color:#2C7F73;
+	padding:1%;
+}
+
+#sesion {	
+	width:10%;
+	font-size:12px;
+	margin-right:7%;
+	margin-top: 10%;
+}
+
+

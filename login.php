@@ -5,9 +5,7 @@
 <link href="estilos.css" rel="stylesheet"/>
 </head>
 <body>
-<header>  
-Encabezado
-</header>
+<header>Encabezado</header>
 <nav>    
     <div id="navegador">
       <ul>
@@ -19,6 +17,9 @@ Encabezado
 </nav>
 <section>
     <div class="contenedor">
+
+    <h1 class="titulo">Ingreso de usuarios</h1>
+
     	<form name="form1" method="post" action="validar.php">  
              <table class="formulario">
              
@@ -30,7 +31,7 @@ Encabezado
              
                     <tr>
                       <td class="etiqueta">Contraseña:</td>
-                      <td><input type="text" name="clave" id="textfield" /></td>
+                      <td><input type="password" name="clave" id="textfield" /></td>
                     </tr>
                     
                     <tr>

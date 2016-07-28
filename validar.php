@@ -9,26 +9,71 @@
 <?php
 	session_start();
 	include("conexion.php");
+
+	// Toma de datos del formulario:
 	
 	$documento = $_POST['documento'];
 	$clave 	   = $_POST['clave'];
 	$respuesta = $_POST['respuesta'];
 	
-		if( $clave == "1234" && $respuesta == 16" )
+
+	// Consulta a base de datos:
+
+	$query1 = "SELECT documento FROM usuarios WHERE documento = '$documento';";
+
+	$query2 = "SELECT clave FROM usuarios WHERE clave = '$clave';";
+
+	$result = $conexion->query( $query1 );
+	$ddocumento = $result->fetch_assoc();
+
+	$result2 = $conexion->query( $query2 );
+	$cclave = $result2->fetch_assoc();
+
+
+	// Si $ddocumento o $cclave no están definidas, es porque no existe el usuario:
+	if( !isset( $ddocumento ) )
+	{
+		echo
+		"
+			<p class='formulario'>
+				Error: no existe el usuario de identificación $documento
+			</p>
+		";
+	}
+
+	if ( isset( $ddocumento ) )
+	{
+		if( isset( $cclave) )
 		{
-			$_SESSION['principal'] = true;
-			header("Location:operaciones.php");
+			if( strcmp( $documento, $ddocumento ) == 0 && strcmp( $clave, $cclave ) == 0 )
+			{
+				if( $respuesta == "16" )
+				{
+					$_SESSION['usuario'] = $ddocumento['documento'];
+					header("Location:operaciones.php");
+				}
+				else
+				{
+					echo 
+					"
+						<p class='formulario'>
+							Error: la respuesta de seguridad es incorrecta
+						</p>
+					";
+				}
+				
+			}
 		}
-						
-		if( $clave != "1234" || $respuesta != "16" )
+		else
 		{
-			$_SESSION['principal'] = false;
-			echo "Error: Contraseña o respuesta no válidos";
 			echo 
-			"<form action='index.php'>
-				<input type='submit' value='Intentar de nuevo' />
-			</form>";
-		}	
+			"
+				<p class='formulario'>
+					Error: la contraseña ingresada es incorrecta
+				</p>
+			";
+		}
+	}
 
 ?>
 </body>

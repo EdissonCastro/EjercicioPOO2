@@ -5,9 +5,7 @@
 <link href="estilos.css" rel="stylesheet"/>
 </head>
 <body>
-<header>  
-Encabezado
-</header>
+<header>Encabezado</header>
 <nav>    
     <div id="navegador">
       <ul>
@@ -18,19 +16,26 @@ Encabezado
     </div>
 </nav>
 <section>
-    <div class="contenedor">
-    	<form name="form1" method="post" action="validar.php">  
+    <div class="contenedor"> 
+      <h1 class="titulo">Registro de usuarios</h1>
+
+    	<form name="form1" method="post" action="register.php"> 
              <table class="formulario">
              
              		<tr>
-                      <td class="etiqueta">Documento:</td>
+                      <td class="etiqueta">Número de documento:</td>
                       <td><input type="text" name="documento" id="textfield" /></td>
                     </tr>
              
              
                     <tr>
                       <td class="etiqueta">Contraseña:</td>
-                      <td><input type="text" name="clave" id="textfield" /></td>
+                      <td><input type="password" name="clave" id="textfield" /></td>
+                    </tr>
+
+                    <tr>
+                      <td class="etiqueta">Confirme su contraseña:</td>
+                      <td><input type="password" name="clave2" id="textfield" /></td>
                     </tr>
                     
                     <tr>
@@ -40,7 +45,7 @@ Encabezado
                     
                     <tr>
                       <td colspan="2">                    
-                          <button type="submit" name="button" id="button">Enviar</button>                     
+                          <button type="submit" name="button" id="button">Registrar usuario</button>                     
                       </td>
                    	</tr>                 
              </table>                  
@@ -50,9 +55,6 @@ Encabezado
 <footer>Pie de página</footer>
 
 
-<!--
 
-
--->
 </body>
 </html>

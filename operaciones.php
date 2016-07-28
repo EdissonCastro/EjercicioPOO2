@@ -6,10 +6,33 @@
 </head>
 <body>
 <header>Encabezado</header>
-<section>
+<nav>    
+    <div id="navegador">
+      <ul>
+        <li><a href="index.php">Inicio</a></li>
+        <li><a href="login.php">Ingresar</a></li>
+        <li><a href="registro.php">Registrarse</a></li>
+        <li><a href="consoperaciones.php">Consultar operaciones</a></li>
+        <li><a href="cerrarsesion.php">Cerrar sesión</a></li>
+      </ul>
+    </div>
+</nav>             
+
     <div class="contenedor">
     	<form name="form1" method="post" action="validar.php">  
              <table class="formulario">
+                    <tr>
+                      <td class="etiqueta" colspan="2" style="font-size:12px;">
+                        Usuario:
+                        <?php
+                          session_start();
+                          echo $_SESSION['usuario'];
+                        ?>  
+                      </td>
+                    </tr>
+                      
+                    
+
                     <tr>
                       <td class="etiqueta">Primer número:</td>
                       <td><input type="text" name="num1" id="textfield" /></td>
