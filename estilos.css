@@ -1,117 +1,139 @@
 @charset "utf-8";
-body{
+body {
 	background-image:url("weather.png");
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:18px;
-}
-
-header, footer{	
-	border: 1px solid black;
-	border-radius:10px;
-	margin: auto;
-	width: 60%;
-}
-
-section{
-	border-radius:10px;
-	border:1px solid black;
-	margin:auto;
-	width:60%;
-}
-
-td{
-	padding:10px;
-	align:center; 
-}
-
-input{
-	height:25px;
-	width: 100%;
-	border-radius:6px;
-	border-style:groove;
-}
-
-button{
-	border-radius:5px;
-	padding:15px;	
-}
-
-button:hover{
-	background-color:#0CF;
-}
-
-.contenedor{
-	padding: 45px;
-	border-radius:10px;
-	background-color:#2C7F73;
-	margin:auto;
-	width:53%;
-}
-
-.formulario{
-	width:60%;
-	margin-top:20px;
-	padding: 15px;
-	margin:auto;
-	margin-bottom:10px;
-	border-radius:10px;
-	background-color:#84CCC1;
+	padding:0px;
+	margin:0px;
+	font-family:Arial;
 	text-align:center;
 }
 
-.etiqueta{
-	text-align:right;
-}
-
-.titulo{
-	width:60%;
-	border-radius: 10px;
-	font-size:26px;
-	margin-top:20px;
-	padding: 15px;
+#contenedor{
+	border:none;
+	width:90%;
 	margin:auto;
-	margin-bottom:10px;
-	border-radius:10px;
-	background-color:#84CCC1;
-	text-align:center;
+	background-image:url("school.png");
 }
 
-#navegador ul{
-	list-style-type: none;
+#encabezado{
+	width:100%;
+	padding:50px;
 	text-align:center;
-}
-
-#navegador li{
-	display:inline;
-	text-align:center;}
-
-#navegador li a{
 	
-	color:black;
-	background-color:#84CCC1;
-	padding:2%;	
+}
+
+h1{
+	font-size:350%;
+	margin-top:0px;
+}
+
+
+
+#pie{
+	font-size:150%;
+	width:100%;
+	height:200px;
+	padding:50px;
+	text-align:center;
+	
+}
+
+.encabezado{		
+	font-size:360%;		
+	margin-top:0px;	
+}
+
+.pie{
+	font-size:125%;
+}
+
+
+#navbar{
+	width:100%;
+}
+
+
+#enlaces ul{
+	list-style-type:none;
+	text-align:center;
+		
+}
+
+#enlaces li{
+	list-style-type:none;
+	display:inline;	
+	border-radius:5px;	
+	border:1px solid black;
+	padding:50px;
+	font-size:180%;
+	background-color:#6ed8ff;
+	
+}
+
+#enlaces a{
 	text-decoration:none;
+	padding:80px;
+	color:white;
+	text-align:center;
+	
 }
 
-#navegador li a:hover{
-	background-color:#0CF;
-	color:#ffffff;
+#enlaces a:hover {
+	color:#ffbe6e;
 }
 
-nav{
-	width:58%;
-	border:none;	
-	margin:auto;	
-	border-radius:10px;
-	background-color:#2C7F73;
-	padding:1%;
+#enlaces_2 ul{
+	list-style-type:none;
+	text-align:center;
+		
 }
 
-#sesion {	
-	width:10%;
-	font-size:12px;
-	margin-right:7%;
-	margin-top: 10%;
+#enlaces_2 li{
+	list-style-type:none;
+	display:inline;	
+	border-radius:5px;	
+	border:1px solid black;
+	padding:30px;
+	font-size:180%;
+	background-color:#6ed8ff;
+	
 }
 
+#enlaces_2 a{
+	text-decoration:none;
+	padding:30px;
+	color:white;
+	text-align:center;
+	
+}
+
+#enlaces_2 a:hover {
+	color:#ffbe6e;
+}
+
+#seccion_1, #seccion_2{
+	width:100%;
+	background-image:url("school.png");	
+	
+}
+
+#seccion_1{	
+	padding:8%;
+	width:84%;	
+	height:120px;
+	
+}
+
+#titulo{
+	font-size:350%;
+}
+
+#instruccion, #instruccion_2{
+	font-size:140%;
+}
+
+#contenedor_2{	
+	background-color:rgba(0, 0, 0, 0.3);
+	height:100px;
+	padding:100px;
+}
 

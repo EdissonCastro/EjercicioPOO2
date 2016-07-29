@@ -5,16 +5,51 @@
 <link href="estilos.css" rel="stylesheet"/>
 </head>
 <body>
-<header>Encabezado</header>
-<nav>    
-    <div id="navegador">
-      <ul>
-        <li><a href="index.php">Inicio</a></li>
-        <li><a href="login.php">Ingresar</a></li>
-        <li><a href="registro.php">Registrarse</a></li>
-      </ul>
-    </div>
+<header>	
+	<section class="encabezado">
+		Operaciones matemáticas básicas
+	</section>
+</header>
+
+<nav class="contenido">
+	<div class="contenedor"> 	
+		  <ul id="enlaces">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="#">Ingresar</a></li>
+			<li><a href="registro.php">Registrarse</a></li>
+		  </ul>	
+	</div>
 </nav>
+
+<section class="contenido">
+	
+	<strong class="titulo">Acceso al sistema</strong>	
+	<p>Seleccione una de las siguientes opciones para continuar:</p>
+	
+	<div class="contenedor">
+		<ul id="enlaces">
+			<li><a href="#">Acceder al sistema</a></li>
+			<li><a href="#">Registrarse en el sistema</a></li>
+		</ul>
+	</div>	
+
+</section>
+
+<footer>
+	<section class="pie">
+		<em>
+			<p id="institucion">Servicio Nacional de Aprendizaje - SENA</p>
+			<p id="programa">Análisis y Desarrollo de Sistemas de Información</p>
+			<p id="creadores">Mariana Romero - Edisson Castro</p>
+			<p id="copyright">Todos los derechos reservados - 2016</p>
+		<em>
+	</section>
+</footer>
+
+<!--
+
+<header>Encabezado</header>
+
 <section>
     <div class="contenedor">
 
@@ -51,7 +86,6 @@
 <footer>Pie de página</footer>
 
 
-<!--
 
 
 -->
