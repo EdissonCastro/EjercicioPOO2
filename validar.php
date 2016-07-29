@@ -7,9 +7,9 @@
 </head>
 <body>
 <?php
-	session_start();
+	
 	include("conexion.php");
-
+	
 	// Toma de datos del formulario:
 	
 	$documento = $_POST['documento'];
@@ -19,62 +19,63 @@
 
 	// Consulta a base de datos:
 
-	$query1 = "SELECT documento FROM usuarios WHERE documento = '$documento';";
+		$query1 = "SELECT documento FROM usuarios WHERE documento = '$documento';";
 
-	$query2 = "SELECT clave FROM usuarios WHERE clave = '$clave';";
+		$query2 = "SELECT clave FROM usuarios WHERE clave = '$clave';";
 
-	$result = $conexion->query( $query1 );
-	$ddocumento = $result->fetch_assoc();
+		$result = $conexion->query( $query1 );
+		$ddocumento = $result->fetch_assoc();
 
-	$result2 = $conexion->query( $query2 );
-	$cclave = $result2->fetch_assoc();
+		$result2 = $conexion->query( $query2 );
+		$cclave = $result2->fetch_assoc();
 
 
-	// Si $ddocumento o $cclave no están definidas, es porque no existe el usuario:
-	if( !isset( $ddocumento ) )
-	{
-		echo
-		"
-			<p class='formulario'>
-				Error: no existe el usuario de identificación $documento
-			</p>
-		";
-	}
-
-	if ( isset( $ddocumento ) )
-	{
-		if( isset( $cclave) )
+		// Si $ddocumento o $cclave no están definidas, es porque no existe el usuario:
+		if( !isset( $ddocumento ) )
 		{
-			if( strcmp( $documento, $ddocumento ) == 0 && strcmp( $clave, $cclave ) == 0 )
-			{
-				if( $respuesta == "16" )
-				{
-					$_SESSION['usuario'] = $ddocumento['documento'];
-					header("Location:operaciones.php");
-				}
-				else
-				{
-					echo 
-					"
-						<p class='formulario'>
-							Error: la respuesta de seguridad es incorrecta
-						</p>
-					";
-				}
-				
-			}
-		}
-		else
-		{
-			echo 
+			echo
 			"
 				<p class='formulario'>
-					Error: la contraseña ingresada es incorrecta
+					Error: no existe el usuario de identificación $documento
 				</p>
 			";
 		}
-	}
 
+		if ( isset( $ddocumento ) )
+		{
+			if( isset( $cclave) )
+			{
+				if( strcmp( $documento, $ddocumento ) == 0 && strcmp( $clave, $cclave ) == 0 )
+				{
+					if( $respuesta == "2" )
+					{
+						session_start();
+						$_SESSION['usuario'] = $ddocumento['documento'];
+						header("Location:operaciones.php");
+					}
+					else
+					{
+						echo 
+						"
+							<p class='formulario'>
+								Error: la respuesta de seguridad es incorrecta
+							</p>
+						";
+					}
+					
+				}
+			}
+			else
+			{
+				echo 
+				"
+					<p class='formulario'>
+						Error: la contraseña ingresada es incorrecta
+					</p>
+				";
+			}
+		}
+	
 ?>
 </body>
 </html>

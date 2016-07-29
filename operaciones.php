@@ -19,7 +19,7 @@
 </nav>             
 
     <div class="contenedor">
-    	<form name="form1" method="post" action="validar.php">  
+    	<form name="form1" method="post" action="calcular.php">  
              <table class="formulario">
                     <tr>
                       <td class="etiqueta" colspan="2" style="font-size:12px;">
